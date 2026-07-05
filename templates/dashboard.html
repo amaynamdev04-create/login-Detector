@@ -1,0 +1,134 @@
+{% extends "layout.html" %}
+{% block title %}Dashboard | {{ config.APP_DISPLAY_NAME }}{% endblock %}
+{% block content %}
+<section class="page-stack" x-data="dashboardPage()">
+    <div class="hero-banner">
+        <div>
+            <p class="eyebrow">Overview</p>
+            <h1>Live visibility into authentication activity and attack pressure.</h1>
+            <p class="hero-copy">Public IP telemetry, geolocation enrichment, and brute-force detection are surfaced here in real time.</p>
+        </div>
+        <button type="button" class="secondary-button" @click="refreshStats()">Refresh Data</button>
+    </div>
+
+    <div class="metrics-grid">
+        <article class="metric-card"><span>Total Events</span><strong data-counter="{{ summary.total_logins }}">{{ summary.total_logins }}</strong></article>
+        <article class="metric-card"><span>Successful</span><strong class="metric-good" data-counter="{{ summary.successful_logins }}">{{ summary.successful_logins }}</strong></article>
+        <article class="metric-card"><span>Failed</span><strong class="metric-bad" data-counter="{{ summary.failed_logins }}">{{ summary.failed_logins }}</strong></article>
+        <article class="metric-card"><span>Blocked IPs</span><strong class="metric-warn" data-counter="{{ summary.blocked_ips }}">{{ summary.blocked_ips }}</strong></article>
+        <article class="metric-card"><span>Average Risk</span><strong data-counter="{{ summary.average_risk }}">{{ summary.average_risk }}</strong></article>
+        <article class="metric-card"><span>Threat Level</span><strong class="{% if summary.threat_level == 'Critical' %}metric-bad{% else %}metric-good{% endif %}">{{ summary.threat_level }}</strong></article>
+    </div>
+
+    <div class="content-grid">
+        <article class="panel-card">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">Trends</p>
+                    <h2>Hourly Event Volume</h2>
+                </div>
+            </div>
+            <canvas id="attackTimelineChart"></canvas>
+        </article>
+
+        <article class="panel-card">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">Geography</p>
+                    <h2>Top Countries</h2>
+                </div>
+            </div>
+            <div class="stack-list">
+                {% for item in top_countries %}
+                    <div class="list-row">
+                        <div>
+                            <strong>{{ item.label }}</strong>
+                            <p>{{ item.count }} event{{ '' if item.count == 1 else 's' }}</p>
+                        </div>
+                        <span class="badge">{{ item.count }}</span>
+                    </div>
+                {% else %}
+                    <div class="empty-state">Country data will appear after public IP lookups succeed.</div>
+                {% endfor %}
+            </div>
+        </article>
+    </div>
+
+    <div class="content-grid content-grid-wide">
+        <article class="panel-card">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">Recent Activity</p>
+                    <h2>Latest Login Attempts</h2>
+                </div>
+                <a href="{{ url_for('logs.list_logs') }}" class="link-button">Open full log</a>
+            </div>
+            <div class="stack-list">
+                {% for item in recent_activity %}
+                    <div class="list-row">
+                        <div class="stack-tight">
+                            <strong>{{ item.username }}</strong>
+                            <p>{{ item.public_ip }}{% if item.city != 'Unknown' or item.country != 'Unknown' %} | {{ item.city }}, {{ item.country }}{% endif %}</p>
+                            <p>{{ item.timestamp }} | {{ item.message }} | {{ item.ip_version or 'Unknown IP version' }}</p>
+                        </div>
+                        <span class="badge {% if item.status == 'success' %}badge-success{% else %}badge-danger{% endif %}">{{ item.status }}</span>
+                    </div>
+                {% else %}
+                    <div class="empty-state">No real login activity has been captured yet.</div>
+                {% endfor %}
+            </div>
+        </article>
+
+        <article class="panel-card">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">Response</p>
+                    <h2>Active Blocks</h2>
+                </div>
+            </div>
+            <div class="stack-list">
+                {% for item in blocked_items %}
+                    <div class="list-row">
+                        <div class="stack-tight">
+                            <strong>{{ item.ip_address }}</strong>
+                            <p>{{ item.reason }}</p>
+                            <p>Expires {{ item.expires_at_display }}</p>
+                        </div>
+                        <span class="badge badge-warning">Blocked</span>
+                    </div>
+                {% else %}
+                    <div class="empty-state">No blocked IPs are currently active.</div>
+                {% endfor %}
+            </div>
+        </article>
+    </div>
+
+    <div class="content-grid">
+        <article class="panel-card">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">Attackers</p>
+                    <h2>Most Active Public IPs</h2>
+                </div>
+            </div>
+            <canvas id="topAttackersChart"></canvas>
+        </article>
+
+        <article class="panel-card">
+            <div class="panel-heading">
+                <div>
+                    <p class="eyebrow">Targets</p>
+                    <h2>Most Targeted Users</h2>
+                </div>
+            </div>
+            <canvas id="topUsersChart"></canvas>
+        </article>
+    </div>
+</section>
+
+<script id="dashboard-data" type="application/json">{{ {
+    "hourly_activity": hourly_activity,
+    "top_attackers": top_attackers,
+    "top_users": top_users
+} | tojson }}</script>
+{% endblock %}

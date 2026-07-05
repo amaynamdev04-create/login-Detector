@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | {{ config.APP_DISPLAY_NAME }}</title>
+    <script>
+        (function () {
+            const storedTheme = localStorage.getItem('lam-theme');
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.dataset.theme = storedTheme || (systemDark ? 'dark' : 'light');
+            document.documentElement.classList.add('theme-ready');
+        }());
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="auth-body">
+    <section class="auth-shell">
+        <div class="auth-panel auth-panel-copy">
+            <p class="eyebrow">Production Security Portal</p>
+            <h1>Monitor real login telemetry with proxy-aware IP detection.</h1>
+            <p>
+                Every sign-in attempt on this page is recorded as a real event, enriched with public IP geolocation when available,
+                and evaluated by the brute-force detector immediately.
+            </p>
+            <div class="auth-note">
+                <strong>Bootstrap account</strong>
+                <span>Username defaults to `{{ config['BOOTSTRAP_USERNAME'] }}`. Configure `BOOTSTRAP_PASSWORD` before public deployment.</span>
+            </div>
+            <div class="auth-note">
+                <strong>Owner</strong>
+                <span>{{ config.APP_OWNER_NAME }}</span>
+            </div>
+        </div>
+
+        <div class="auth-panel">
+            <div class="auth-header">
+                <p class="eyebrow">Secure Sign In</p>
+                <h2>{{ config.APP_DISPLAY_NAME }}</h2>
+                <p>Use your real application credentials. Placeholder users and demo records have been removed.</p>
+            </div>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-stack">
+                        {% for category, message in messages %}
+                            <div class="flash-message flash-{{ category }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <form method="post" class="auth-form">
+                <input type="hidden" name="private_ip" id="privateIpField">
+                <label>
+                    <span>Username</span>
+                    <input id="username" name="username" required autocomplete="username" class="form-control" placeholder="Enter username">
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input id="password" name="password" type="password" required autocomplete="current-password" class="form-control" placeholder="Enter password">
+                </label>
+                <button type="submit" class="primary-button">Sign In</button>
+            </form>
+
+            <div class="auth-footer">
+                Repeated failed logins from the same public IP or against the same username trigger automatic alerting and temporary blocking.
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+</body>
+</html>

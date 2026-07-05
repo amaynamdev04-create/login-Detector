@@ -1,0 +1,980 @@
+2026-06-30 22:22:20,303 WARNING [monitor.watcher] Brute-force attack detected for 192.168.1.20
+2026-06-30 22:22:20,312 WARNING [services.notification] ALERT [Critical] user=admin ip=192.168.1.20 attempts=5 action=Blocked IP for 15 minutes
+2026-06-30 22:22:20,336 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-06-30 22:25:09,515 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-06-30 22:25:09,615 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-30 22:25:09,616 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-06-30 22:25:34,785 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:34] "GET / HTTP/1.1" 200 -
+2026-06-30 22:25:35,003 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:35] "GET /static/js/alerts.js HTTP/1.1" 200 -
+2026-06-30 22:25:35,022 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:35] "GET /static/js/theme.js HTTP/1.1" 200 -
+2026-06-30 22:25:35,024 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:35] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2026-06-30 22:25:35,026 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:35] "GET /static/js/charts.js HTTP/1.1" 200 -
+2026-06-30 22:25:35,029 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:35] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-06-30 22:25:36,572 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-30 22:25:49,916 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:49] "GET /about HTTP/1.1" 200 -
+2026-06-30 22:25:49,943 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 22:25:49,946 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:49] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 22:25:49,947 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:49] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 22:25:49,949 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:49] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 22:25:49,951 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:49] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 22:25:50,896 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:50] "GET /api/export/logs HTTP/1.1" 200 -
+2026-06-30 22:25:55,064 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:55] "GET /settings/ HTTP/1.1" 200 -
+2026-06-30 22:25:55,097 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 22:25:55,098 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:55] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 22:25:55,100 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:55] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 22:25:55,106 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:55] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 22:25:55,108 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:25:55] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 22:26:02,054 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:26:02] "GET / HTTP/1.1" 200 -
+2026-06-30 22:26:02,080 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:26:02] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 22:26:02,085 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:26:02] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 22:26:02,085 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:26:02] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 22:26:02,087 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:26:02] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 22:26:02,088 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:26:02] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 22:26:58,402 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:26:58] "GET /logs/?q=py%20-3%20-m%20pytest HTTP/1.1" 200 -
+2026-06-30 22:26:58,426 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:26:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 22:26:58,429 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:26:58] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 22:26:58,432 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:26:58] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 22:26:58,433 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:26:58] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 22:26:58,436 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 22:26:58] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:25:07,365 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-06-30 23:25:07,391 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-30 23:25:07,391 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-06-30 23:25:50,207 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:50] "GET / HTTP/1.1" 200 -
+2026-06-30 23:25:50,446 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:50] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:25:50,447 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:50] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:25:50,452 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:25:50,452 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:50] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:25:50,453 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:50] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:25:57,429 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:57] "GET /logs/ HTTP/1.1" 200 -
+2026-06-30 23:25:57,447 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:25:57,452 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:57] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:25:57,453 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:57] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:25:57,459 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:57] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:25:57,460 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:57] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:25:59,106 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:59] "GET /logs/?q=&status=&start=&end= HTTP/1.1" 200 -
+2026-06-30 23:25:59,131 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:25:59,134 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:59] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:25:59,135 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:59] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:25:59,144 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:59] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:25:59,145 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:25:59] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:26:00,820 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:00] "GET /analytics/ HTTP/1.1" 200 -
+2026-06-30 23:26:00,839 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:26:00,847 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:00] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:26:00,849 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:00] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:26:00,850 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:00] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:26:00,851 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:00] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:26:03,477 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:03] "GET / HTTP/1.1" 200 -
+2026-06-30 23:26:03,510 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:03] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:26:03,511 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:03] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:26:03,514 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:03] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:26:03,515 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:03] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:26:03,519 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:03] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:26:09,757 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:09] "GET /api/export/logs HTTP/1.1" 200 -
+2026-06-30 23:26:18,031 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:18] "GET /settings/ HTTP/1.1" 200 -
+2026-06-30 23:26:18,067 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:26:18,070 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:18] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:26:18,072 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:18] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:26:18,075 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:18] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:26:18,079 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:18] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:26:21,946 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:21] "GET / HTTP/1.1" 200 -
+2026-06-30 23:26:21,987 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:26:21,993 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:21] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:26:21,993 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:21] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:26:21,993 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:21] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:26:21,995 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:26:21] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:28:32,447 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:32] "GET /logs/ HTTP/1.1" 200 -
+2026-06-30 23:28:32,481 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:28:32,486 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:32] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:28:32,486 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:32] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:28:32,490 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:32] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:28:32,492 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:32] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:28:43,315 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:43] "GET /logs/?q=&status=success&start=&end= HTTP/1.1" 200 -
+2026-06-30 23:28:43,338 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:28:43,342 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:43] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:28:43,346 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:43] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:28:43,346 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:43] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:28:43,349 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:43] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:28:43,731 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:43] "GET /logs/?q=&status=success&start=&end= HTTP/1.1" 200 -
+2026-06-30 23:28:43,753 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:28:43,755 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:43] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:28:43,759 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:43] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:28:43,762 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:43] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:28:43,766 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:28:43] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:29:16,176 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:29:16] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2026-06-30 23:29:16,219 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:29:16] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-06-30 23:29:16,227 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:29:16] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-06-30 23:29:16,268 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:29:16] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=3VxQZXsL7fXvs1TVjp1T HTTP/1.1" 200 -
+2026-06-30 23:29:16,279 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:29:16] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-06-30 23:30:09,495 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-06-30 23:30:24,577 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:30:24] "[33mGET /login HTTP/1.1[0m" 404 -
+2026-06-30 23:30:38,862 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:30:38] "[33mGET /login HTTP/1.1[0m" 404 -
+2026-06-30 23:30:56,675 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-06-30 23:30:56,697 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-30 23:30:56,697 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-06-30 23:30:59,991 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:30:59] "[32mGET / HTTP/1.1[0m" 302 -
+2026-06-30 23:30:59,998 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:30:59] "GET /login HTTP/1.1" 200 -
+2026-06-30 23:31:50,817 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:31:50] "GET /login HTTP/1.1" 200 -
+2026-06-30 23:32:07,065 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:32:07] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:32:14,411 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:32:14] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:32:26,455 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:32:26] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:32:34,654 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:32:34] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:32:42,546 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:32:42] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:32:50,335 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:32:50] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:32:58,523 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:32:58] "[32mGET / HTTP/1.1[0m" 302 -
+2026-06-30 23:32:58,530 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:32:58] "GET /login HTTP/1.1" 200 -
+2026-06-30 23:33:01,608 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:33:01] "[32mGET / HTTP/1.1[0m" 302 -
+2026-06-30 23:33:01,615 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:33:01] "GET /login HTTP/1.1" 200 -
+2026-06-30 23:33:30,249 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:33:30] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:34:20,115 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:34:20] "[33mGET /auth HTTP/1.1[0m" 404 -
+2026-06-30 23:34:35,048 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:34:35] "GET /login HTTP/1.1" 200 -
+2026-06-30 23:35:40,292 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-06-30 23:35:40,313 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-30 23:35:40,313 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-06-30 23:35:47,326 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:35:47] "GET /login HTTP/1.1" 200 -
+2026-06-30 23:35:54,440 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:35:54] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:35:59,628 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:35:59] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:36:04,537 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:36:04,554 WARNING [services.notification] ALERT [Critical] user=AMAYNAMDEV ip=127.0.0.1 attempts=5 action=Blocked IP for 15 minutes
+2026-06-30 23:36:04,565 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:36:04,576 WARNING [services.notification] ALERT [Critical] user=AMAYNAMDEV ip=127.0.0.1 attempts=6 action=Blocked IP for 15 minutes
+2026-06-30 23:36:04,578 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:36:04] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:36:11,066 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:36:11,075 WARNING [services.notification] ALERT [Critical] user=AMAYNAMDEV ip=127.0.0.1 attempts=7 action=Blocked IP for 15 minutes
+2026-06-30 23:36:11,078 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:36:11] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:36:11,095 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:36:11,104 WARNING [services.notification] ALERT [Critical] user=AMAYNAMDEV ip=127.0.0.1 attempts=8 action=Blocked IP for 15 minutes
+2026-06-30 23:36:40,838 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:36:40,848 WARNING [services.notification] ALERT [Critical] user=AMAYNAMDEV ip=127.0.0.1 attempts=9 action=Blocked IP for 15 minutes
+2026-06-30 23:36:40,866 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:36:40,874 WARNING [services.notification] ALERT [Critical] user=AMAYNAMDEV ip=127.0.0.1 attempts=10 action=Blocked IP for 15 minutes
+2026-06-30 23:36:40,877 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:36:40] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:36:46,734 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:36:46,743 WARNING [services.notification] ALERT [Critical] user=dwfff ip=127.0.0.1 attempts=11 action=Blocked IP for 15 minutes
+2026-06-30 23:36:46,744 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:36:46] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:36:46,756 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:36:46,768 WARNING [services.notification] ALERT [Critical] user=dwfff ip=127.0.0.1 attempts=12 action=Blocked IP for 15 minutes
+2026-06-30 23:37:31,194 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:37:31,202 WARNING [services.notification] ALERT [Critical] user=admin ip=127.0.0.1 attempts=13 action=Blocked IP for 15 minutes
+2026-06-30 23:37:31,205 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:37:31] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:37:31,211 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:37:31,227 WARNING [services.notification] ALERT [Critical] user=admin ip=127.0.0.1 attempts=14 action=Blocked IP for 15 minutes
+2026-06-30 23:38:21,025 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-06-30 23:38:21,049 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-30 23:38:21,049 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-06-30 23:38:50,412 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:38:50] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-06-30 23:38:50,457 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:38:50] "GET / HTTP/1.1" 200 -
+2026-06-30 23:38:50,678 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:38:50] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:38:50,688 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:38:50] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:38:50,690 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:38:50] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:38:50,691 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:38:50] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:38:50,694 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:38:50] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:38:53,631 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:38:53] "GET /logs/ HTTP/1.1" 200 -
+2026-06-30 23:38:53,659 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:38:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:38:53,663 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:38:53] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:38:53,669 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:38:53] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:38:53,669 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:38:53] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:38:53,672 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:38:53] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:39:13,385 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:13] "GET /logs/?page=2&q=&status=&start=&end= HTTP/1.1" 200 -
+2026-06-30 23:39:13,426 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:39:13,431 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:13] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:39:13,432 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:13] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:39:13,433 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:13] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:39:13,435 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:13] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:39:16,632 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:16] "GET /analytics/ HTTP/1.1" 200 -
+2026-06-30 23:39:16,674 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:39:16,676 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:16] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:39:16,679 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:16] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:39:16,681 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:16] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:39:16,683 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:16] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:39:18,485 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:18] "GET /settings/ HTTP/1.1" 200 -
+2026-06-30 23:39:18,520 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:18] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:39:18,524 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:18] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:39:18,527 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:18] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:39:18,529 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:18] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:39:18,531 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:18] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:39:19,309 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:39:19] "GET /login HTTP/1.1" 200 -
+2026-06-30 23:40:20,900 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:40:20] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:40:28,044 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:40:28] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:40:34,223 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:40:34,235 WARNING [services.notification] ALERT [Critical] user=FWEJNBFEWJKBEWF ip=127.0.0.1 attempts=5 action=Blocked IP for 15 minutes
+2026-06-30 23:40:34,236 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:40:34] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:40:34,253 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:40:34,267 WARNING [services.notification] ALERT [Critical] user=FWEJNBFEWJKBEWF ip=127.0.0.1 attempts=6 action=Blocked IP for 15 minutes
+2026-06-30 23:40:40,589 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:40:40,598 WARNING [services.notification] ALERT [Critical] user=GWEERHGRRRG ip=127.0.0.1 attempts=7 action=Blocked IP for 15 minutes
+2026-06-30 23:40:40,615 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:40:40,623 WARNING [services.notification] ALERT [Critical] user=GWEERHGRRRG ip=127.0.0.1 attempts=8 action=Blocked IP for 15 minutes
+2026-06-30 23:40:40,624 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:40:40] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:40:57,968 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:40:57,977 WARNING [services.notification] ALERT [Critical] user=admin ip=127.0.0.1 attempts=9 action=Blocked IP for 15 minutes
+2026-06-30 23:40:57,982 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:40:57] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:40:57,986 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:40:57,999 WARNING [services.notification] ALERT [Critical] user=admin ip=127.0.0.1 attempts=10 action=Blocked IP for 15 minutes
+2026-06-30 23:41:32,601 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-06-30 23:41:32,625 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-30 23:41:32,625 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-06-30 23:41:42,281 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:41:42] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-06-30 23:41:42,330 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:41:42] "GET / HTTP/1.1" 200 -
+2026-06-30 23:41:42,556 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:41:42] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:41:42,557 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:41:42] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:41:42,558 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:41:42] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:41:42,560 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:41:42] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:41:42,564 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:41:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:41:56,957 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:41:56] "GET /login HTTP/1.1" 200 -
+2026-06-30 23:42:06,636 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-06-30 23:42:06,646 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:06] "GET / HTTP/1.1" 200 -
+2026-06-30 23:42:06,680 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:42:06,683 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:06] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:42:06,686 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:06] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:42:06,688 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:06] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:42:06,689 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:06] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:42:17,496 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:17] "GET /logs/ HTTP/1.1" 200 -
+2026-06-30 23:42:17,518 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:42:17,523 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:17] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:42:17,523 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:17] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:42:17,525 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:17] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:42:17,529 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:17] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:42:21,788 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:21] "GET /settings/ HTTP/1.1" 200 -
+2026-06-30 23:42:21,821 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:42:21,827 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:21] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:42:21,830 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:21] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:42:21,831 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:21] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:42:21,835 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:21] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:42:51,474 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:51] "[32mPOST /settings/ HTTP/1.1[0m" 302 -
+2026-06-30 23:42:51,485 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:51] "GET /settings/ HTTP/1.1" 200 -
+2026-06-30 23:42:51,518 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:42:51,520 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:51] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:42:51,524 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:51] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:42:51,529 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:51] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:42:51,531 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:51] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:42:59,083 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:42:59] "[33mGET /login/ HTTP/1.1[0m" 404 -
+2026-06-30 23:43:02,052 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:43:02] "GET /login HTTP/1.1" 200 -
+2026-06-30 23:43:07,819 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:43:07] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:43:14,316 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:43:14] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:43:20,262 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:43:20] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:43:25,822 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:43:25] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:43:32,027 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:43:32] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:43:36,837 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:43:36] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:43:42,055 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:43:42] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:43:47,668 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:43:47] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:43:53,295 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:43:53] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:44:08,731 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:08] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-06-30 23:44:08,740 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:08] "GET / HTTP/1.1" 200 -
+2026-06-30 23:44:08,769 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:44:08,771 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:08] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:08,775 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:08] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:08,778 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:08] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:08,781 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:08] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:10,979 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:10] "GET /settings/ HTTP/1.1" 200 -
+2026-06-30 23:44:11,010 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:11] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:44:11,016 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:11] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:11,016 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:11] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:11,025 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:11] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:11,025 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:11] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:16,956 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:16] "[32mPOST /settings/ HTTP/1.1[0m" 302 -
+2026-06-30 23:44:16,974 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:16] "GET /settings/ HTTP/1.1" 200 -
+2026-06-30 23:44:17,006 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:44:17,010 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:17] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:17,013 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:17] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:17,016 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:17] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:17,016 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:17] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:23,659 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:23] "[33mGET /logoin HTTP/1.1[0m" 404 -
+2026-06-30 23:44:28,852 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:28] "GET /login HTTP/1.1" 200 -
+2026-06-30 23:44:42,911 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:42] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-06-30 23:44:42,933 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:42] "GET / HTTP/1.1" 200 -
+2026-06-30 23:44:42,963 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:42] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:42,966 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:42] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:42,967 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:42] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:44:42,968 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:42] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:42,971 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:42] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:47,594 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:47] "GET /settings/ HTTP/1.1" 200 -
+2026-06-30 23:44:47,627 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:44:47,630 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:47] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:47,635 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:47] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:47,637 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:47] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:47,639 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:47] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:55,796 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:55] "[32mPOST /settings/ HTTP/1.1[0m" 302 -
+2026-06-30 23:44:55,805 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:55] "GET /settings/ HTTP/1.1" 200 -
+2026-06-30 23:44:55,840 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:44:55,845 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:55] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:55,846 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:55] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:55,848 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:55] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:44:55,850 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:44:55] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:45:02,473 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:45:02] "GET /login HTTP/1.1" 200 -
+2026-06-30 23:45:08,841 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:45:08] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:45:15,478 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:45:15] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:45:19,727 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:45:19,739 WARNING [services.notification] ALERT [Critical] user=gg ip=127.0.0.1 attempts=5 action=Blocked IP for 15 minutes
+2026-06-30 23:45:19,740 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:45:19] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:45:19,759 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:45:19,772 WARNING [services.notification] ALERT [Critical] user=gg ip=127.0.0.1 attempts=6 action=Blocked IP for 15 minutes
+2026-06-30 23:45:24,239 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:45:24,247 WARNING [services.notification] ALERT [Critical] user=gg ip=127.0.0.1 attempts=7 action=Blocked IP for 15 minutes
+2026-06-30 23:45:24,256 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:45:24,265 WARNING [services.notification] ALERT [Critical] user=gg ip=127.0.0.1 attempts=8 action=Blocked IP for 15 minutes
+2026-06-30 23:45:24,267 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:45:24] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:45:46,961 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:45:46,969 WARNING [services.notification] ALERT [Critical] user=admin ip=127.0.0.1 attempts=9 action=Blocked IP for 15 minutes
+2026-06-30 23:45:46,983 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-06-30 23:45:46,992 WARNING [services.notification] ALERT [Critical] user=admin ip=127.0.0.1 attempts=10 action=Blocked IP for 15 minutes
+2026-06-30 23:45:46,993 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:45:46] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:52:22,593 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-06-30 23:52:22,614 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-30 23:52:22,614 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-06-30 23:53:14,371 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:53:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-30 23:53:15,995 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:53:15] "[32mGET / HTTP/1.1[0m" 302 -
+2026-06-30 23:53:16,269 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:53:16] "GET /login HTTP/1.1" 200 -
+2026-06-30 23:53:28,168 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:53:28] "GET /login HTTP/1.1" 200 -
+2026-06-30 23:53:36,339 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:53:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-30 23:53:37,051 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:53:37] "GET /login HTTP/1.1" 200 -
+2026-06-30 23:53:47,746 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:53:47] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:53:52,345 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:53:52] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:53:56,663 WARNING [monitor.watcher] Brute-force attack detected for 49.43.5.126
+2026-06-30 23:53:56,677 WARNING [services.notification] ALERT [Critical] user=Rhdhxhs ip=49.43.5.126 attempts=5 action=Blocked IP for 15 minutes
+2026-06-30 23:53:56,679 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:53:56] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:53:56,692 WARNING [monitor.watcher] Brute-force attack detected for 49.43.5.126
+2026-06-30 23:53:56,701 WARNING [services.notification] ALERT [Critical] user=Rhdhxhs ip=49.43.5.126 attempts=6 action=Blocked IP for 15 minutes
+2026-06-30 23:54:00,854 WARNING [monitor.watcher] Brute-force attack detected for 49.43.5.126
+2026-06-30 23:54:00,865 WARNING [services.notification] ALERT [Critical] user=Ehdhxhc ip=49.43.5.126 attempts=7 action=Blocked IP for 15 minutes
+2026-06-30 23:54:00,869 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:54:00] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:54:00,874 WARNING [monitor.watcher] Brute-force attack detected for 49.43.5.126
+2026-06-30 23:54:00,882 WARNING [services.notification] ALERT [Critical] user=Ehdhxhc ip=49.43.5.126 attempts=8 action=Blocked IP for 15 minutes
+2026-06-30 23:54:20,981 WARNING [monitor.watcher] Brute-force attack detected for 49.43.5.126
+2026-06-30 23:54:20,989 WARNING [services.notification] ALERT [Critical] user=admin ip=49.43.5.126 attempts=9 action=Blocked IP for 15 minutes
+2026-06-30 23:54:20,999 WARNING [monitor.watcher] Brute-force attack detected for 49.43.5.126
+2026-06-30 23:54:21,007 WARNING [services.notification] ALERT [Critical] user=admin ip=49.43.5.126 attempts=10 action=Blocked IP for 15 minutes
+2026-06-30 23:54:21,008 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:54:21] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:54:34,678 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-06-30 23:54:34,703 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-30 23:54:34,703 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-06-30 23:54:46,397 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:54:46] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:54:52,966 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:54:52] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:55:01,736 WARNING [monitor.watcher] Brute-force attack detected for 49.43.5.126
+2026-06-30 23:55:01,753 WARNING [services.notification] ALERT [Critical] user=admin ip=49.43.5.126 attempts=5 action=Blocked IP for 15 minutes
+2026-06-30 23:55:01,755 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:55:01] "POST /login HTTP/1.1" 200 -
+2026-06-30 23:55:01,767 WARNING [monitor.watcher] Brute-force attack detected for 49.43.5.126
+2026-06-30 23:55:01,775 WARNING [services.notification] ALERT [Critical] user=admin ip=49.43.5.126 attempts=6 action=Blocked IP for 15 minutes
+2026-06-30 23:55:17,637 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:55:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-06-30 23:55:17,681 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:55:17] "GET / HTTP/1.1" 200 -
+2026-06-30 23:55:17,913 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:55:17] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:55:17,919 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:55:17] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:55:17,924 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:55:17] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:55:17,929 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:55:17] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:55:17,930 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:55:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:55:20,568 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:55:20] "GET /logs/ HTTP/1.1" 200 -
+2026-06-30 23:55:20,589 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:55:20] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-06-30 23:55:20,592 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:55:20] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-06-30 23:55:20,596 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:55:20] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-06-30 23:55:20,599 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:55:20] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:55:20,600 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:55:20] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-06-30 23:56:20,559 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:56:20] "[32mGET /logs/ HTTP/1.1[0m" 302 -
+2026-06-30 23:56:20,564 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:56:20] "GET /login HTTP/1.1" 200 -
+2026-06-30 23:56:21,028 INFO [werkzeug] 127.0.0.1 - - [30/Jun/2026 23:56:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-06-30 23:59:12,905 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-06-30 23:59:12,926 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-30 23:59:12,926 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-06-30 23:59:42,882 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-06-30 23:59:42,902 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-06-30 23:59:42,903 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-01 00:00:25,573 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 00:01:00,676 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 00:01:00,695 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 00:01:00,696 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-01 00:01:02,559 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:01:02] "GET /login HTTP/1.1" 200 -
+2026-07-01 00:01:50,029 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 00:01:50,052 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 00:01:50,053 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-01 00:02:03,655 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 00:02:03,680 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 00:02:03,680 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-01 00:08:21,450 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 00:13:51,019 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 00:13:51,105 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 00:13:51,105 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-01 00:13:54,999 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:13:54] "GET /login HTTP/1.1" 200 -
+2026-07-01 00:14:00,836 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:14:00] "POST /login HTTP/1.1" 200 -
+2026-07-01 00:14:16,662 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 00:14:16,701 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 00:14:16,701 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-01 00:14:21,703 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:14:21] "POST /login HTTP/1.1" 200 -
+2026-07-01 00:14:30,816 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:14:30] "POST /login HTTP/1.1" 200 -
+2026-07-01 00:14:38,557 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:14:38] "POST /login HTTP/1.1" 200 -
+2026-07-01 00:14:44,010 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:14:44] "POST /login HTTP/1.1" 200 -
+2026-07-01 00:14:50,081 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-07-01 00:14:50,095 WARNING [services.notification] ALERT [Critical] user=gg ip=127.0.0.1 attempts=5 action=Blocked IP for 15 minutes
+2026-07-01 00:14:50,097 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:14:50] "POST /login HTTP/1.1" 200 -
+2026-07-01 00:14:57,238 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-07-01 00:14:57,255 WARNING [services.notification] ALERT [Critical] user=ggggg ip=127.0.0.1 attempts=6 action=Blocked IP for 15 minutes
+2026-07-01 00:14:57,257 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:14:57] "POST /login HTTP/1.1" 200 -
+2026-07-01 00:27:36,971 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 00:27:37,008 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 00:27:37,009 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-01 00:27:45,322 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 00:27:45,362 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 00:27:45,363 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-01 00:28:08,360 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:08] "POST /login HTTP/1.1" 200 -
+2026-07-01 00:28:16,313 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:16] "POST /login HTTP/1.1" 200 -
+2026-07-01 00:28:26,406 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-07-01 00:28:26,555 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:26] "GET / HTTP/1.1" 200 -
+2026-07-01 00:28:27,075 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:27] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-07-01 00:28:27,077 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:27] "GET /static/js/charts.js HTTP/1.1" 200 -
+2026-07-01 00:28:27,079 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:27] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2026-07-01 00:28:27,082 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:27] "GET /static/js/alerts.js HTTP/1.1" 200 -
+2026-07-01 00:28:27,082 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:27] "GET /static/js/theme.js HTTP/1.1" 200 -
+2026-07-01 00:28:32,992 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:32] "GET /settings/ HTTP/1.1" 200 -
+2026-07-01 00:28:33,288 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 00:28:33,340 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:33] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-01 00:28:33,341 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:33] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 00:28:33,345 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:33] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 00:28:33,347 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:33] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-01 00:28:37,238 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:37] "[32mPOST /settings/ HTTP/1.1[0m" 302 -
+2026-07-01 00:28:37,251 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:37] "GET /settings/ HTTP/1.1" 200 -
+2026-07-01 00:28:37,501 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:37] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 00:28:37,615 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:37] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 00:28:37,617 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:37] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-01 00:28:37,617 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:37] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-01 00:28:37,617 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:37] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 00:28:46,180 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:28:46] "GET /login HTTP/1.1" 200 -
+2026-07-01 00:29:07,112 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:29:07] "POST /login HTTP/1.1" 200 -
+2026-07-01 00:29:37,707 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 00:29:37,749 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 00:29:37,749 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-01 00:29:43,754 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:29:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-07-01 00:29:43,815 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:29:43] "GET / HTTP/1.1" 200 -
+2026-07-01 00:29:43,893 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:29:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 00:29:44,154 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:29:44] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-01 00:29:44,155 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:29:44] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 00:29:44,156 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:29:44] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 00:29:44,157 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:29:44] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-01 00:29:54,694 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:29:54] "GET /alerts/ HTTP/1.1" 200 -
+2026-07-01 00:29:54,914 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:29:54] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 00:29:54,919 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:29:54] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 00:29:55,046 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:29:55] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-01 00:29:55,048 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:29:55] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 00:29:55,051 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:29:55] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-01 00:30:08,031 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:30:08] "GET /login HTTP/1.1" 200 -
+2026-07-01 00:30:38,309 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:30:38] "[33mGET /alert HTTP/1.1[0m" 404 -
+2026-07-01 00:42:46,926 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:42:46] "GET /login HTTP/1.1" 200 -
+2026-07-01 00:42:52,056 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:42:52] "POST /login HTTP/1.1" 200 -
+2026-07-01 00:42:57,416 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:42:57] "POST /login HTTP/1.1" 200 -
+2026-07-01 00:43:01,662 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:43:01] "POST /login HTTP/1.1" 200 -
+2026-07-01 00:43:08,459 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:43:08] "POST /login HTTP/1.1" 200 -
+2026-07-01 00:43:14,232 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-07-01 00:43:14,253 WARNING [services.notification] ALERT [Critical] user=cccc ip=127.0.0.1 attempts=5 action=Blocked IP for 15 minutes
+2026-07-01 00:43:14,256 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:43:14] "POST /login HTTP/1.1" 200 -
+2026-07-01 00:43:21,482 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-07-01 00:43:21,492 WARNING [services.notification] ALERT [Critical] user=cccccc ip=127.0.0.1 attempts=6 action=Blocked IP for 15 minutes
+2026-07-01 00:43:21,493 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 00:43:21] "POST /login HTTP/1.1" 200 -
+2026-07-01 01:21:53,406 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 01:21:53,448 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 01:21:53,448 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-01 01:21:57,675 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:21:57] "[32mGET / HTTP/1.1[0m" 302 -
+2026-07-01 01:21:57,688 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:21:57] "GET /login HTTP/1.1" 200 -
+2026-07-01 01:22:16,062 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:22:16] "GET /login HTTP/1.1" 200 -
+2026-07-01 01:22:43,233 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:22:43] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-07-01 01:22:43,281 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:22:43] "GET / HTTP/1.1" 200 -
+2026-07-01 01:22:43,448 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:22:43] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 01:22:43,457 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:22:43] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-01 01:22:43,458 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:22:43] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 01:22:43,461 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:22:43] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2026-07-01 01:22:43,461 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:22:43] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 01:22:50,980 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:22:50] "GET /settings/ HTTP/1.1" 200 -
+2026-07-01 01:22:51,013 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:22:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 01:22:51,021 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:22:51] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 01:22:51,023 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:22:51] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 01:22:51,022 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:22:51] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-01 01:22:51,024 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:22:51] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-01 01:30:16,783 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 01:30:16,823 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 01:30:16,823 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-01 01:30:26,502 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:30:26] "GET /login HTTP/1.1" 200 -
+2026-07-01 01:30:34,847 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:30:34] "POST /login HTTP/1.1" 200 -
+2026-07-01 01:30:46,285 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:30:46] "POST /login HTTP/1.1" 200 -
+2026-07-01 01:30:56,119 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:30:56] "POST /login HTTP/1.1" 200 -
+2026-07-01 01:31:05,870 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:31:05] "POST /login HTTP/1.1" 200 -
+2026-07-01 01:31:14,459 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-07-01 01:31:14,476 WARNING [services.notification] ALERT [Critical] user=RVQRAEB ip=127.0.0.1 attempts=5 action=Blocked IP for 15 minutes
+2026-07-01 01:31:14,478 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:31:14] "POST /login HTTP/1.1" 200 -
+2026-07-01 01:31:21,452 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-07-01 01:31:21,467 WARNING [services.notification] ALERT [Critical] user=FDBFB ip=127.0.0.1 attempts=6 action=Blocked IP for 15 minutes
+2026-07-01 01:31:21,470 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:31:21] "POST /login HTTP/1.1" 200 -
+2026-07-01 01:34:06,881 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 01:34:06,941 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 01:34:06,941 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-01 01:34:17,808 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:34:17] "POST /login HTTP/1.1" 200 -
+2026-07-01 01:34:26,982 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:34:26] "POST /login HTTP/1.1" 200 -
+2026-07-01 01:35:37,469 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 01:35:37,502 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 01:35:37,503 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-01 01:35:44,503 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:35:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-07-01 01:35:44,556 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:35:44] "GET / HTTP/1.1" 200 -
+2026-07-01 01:35:44,726 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:35:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 01:35:44,730 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:35:44] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 01:35:44,732 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:35:44] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 01:35:44,733 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:35:44] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-01 01:35:44,733 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:35:44] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-01 01:35:49,855 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:35:49] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-01 01:35:50,805 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:35:50] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-01 01:35:51,383 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:35:51] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-01 01:36:02,126 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:02] "[32mPOST /logout HTTP/1.1[0m" 302 -
+2026-07-01 01:36:02,150 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:02] "GET /login HTTP/1.1" 200 -
+2026-07-01 01:36:19,635 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:19] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-07-01 01:36:19,651 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:19] "GET / HTTP/1.1" 200 -
+2026-07-01 01:36:19,690 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 01:36:19,693 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:19] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 01:36:19,697 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:19] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 01:36:19,700 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:19] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-01 01:36:19,703 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:19] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-01 01:36:25,336 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:25] "GET /settings/ HTTP/1.1" 200 -
+2026-07-01 01:36:25,370 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 01:36:25,377 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:25] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 01:36:25,379 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:25] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-01 01:36:25,379 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:25] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-01 01:36:25,379 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:25] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 01:36:35,104 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:35] "[32mPOST /settings/ HTTP/1.1[0m" 302 -
+2026-07-01 01:36:35,115 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:35] "GET /settings/ HTTP/1.1" 200 -
+2026-07-01 01:36:35,155 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 01:36:35,159 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:35] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 01:36:35,160 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:35] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 01:36:35,163 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:35] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-01 01:36:35,165 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:35] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-01 01:36:40,114 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:40] "GET / HTTP/1.1" 200 -
+2026-07-01 01:36:40,155 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 01:36:40,159 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:40] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 01:36:40,160 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:40] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 01:36:40,164 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:40] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-01 01:36:40,165 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:36:40] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-01 01:37:00,923 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:37:00] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-01 01:37:01,826 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:37:01] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-01 01:38:01,407 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:38:01] "[32mPOST /logout HTTP/1.1[0m" 302 -
+2026-07-01 01:38:01,415 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 01:38:01] "GET /login HTTP/1.1" 200 -
+2026-07-01 11:13:49,588 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 11:13:49,616 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 11:13:49,617 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-01 11:14:05,348 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:14:05] "[32mGET / HTTP/1.1[0m" 302 -
+2026-07-01 11:14:05,362 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:14:05] "GET /login HTTP/1.1" 200 -
+2026-07-01 11:14:16,688 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:14:16] "POST /login HTTP/1.1" 200 -
+2026-07-01 11:14:24,537 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:14:24] "POST /login HTTP/1.1" 200 -
+2026-07-01 11:14:30,540 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:14:30] "POST /login HTTP/1.1" 200 -
+2026-07-01 11:14:36,113 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:14:36] "POST /login HTTP/1.1" 200 -
+2026-07-01 11:14:41,692 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-07-01 11:14:41,706 WARNING [services.notification] ALERT [Critical] user=dsghsi ip=127.0.0.1 attempts=5 action=Blocked IP for 15 minutes
+2026-07-01 11:14:41,707 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:14:41] "POST /login HTTP/1.1" 200 -
+2026-07-01 11:14:48,777 WARNING [monitor.watcher] Brute-force attack detected for 127.0.0.1
+2026-07-01 11:14:48,788 WARNING [services.notification] ALERT [Critical] user=dfhodfbh ip=127.0.0.1 attempts=6 action=Blocked IP for 15 minutes
+2026-07-01 11:14:48,789 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:14:48] "POST /login HTTP/1.1" 200 -
+2026-07-01 11:15:43,580 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 11:15:43,602 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 11:15:43,602 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-01 11:15:49,462 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:15:49] "POST /login HTTP/1.1" 200 -
+2026-07-01 11:15:54,083 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:15:54] "POST /login HTTP/1.1" 200 -
+2026-07-01 11:16:08,170 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:16:08] "POST /login HTTP/1.1" 200 -
+2026-07-01 11:17:03,541 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-01 11:17:03,562 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-01 11:17:03,563 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-01 11:17:09,938 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:09] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-07-01 11:17:09,980 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:09] "GET / HTTP/1.1" 200 -
+2026-07-01 11:17:10,217 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:10] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-01 11:17:10,218 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:10] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-01 11:17:10,220 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:10] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 11:17:10,223 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:10] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 11:17:10,224 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:10] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 11:17:47,571 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:47] "GET /logs/ HTTP/1.1" 200 -
+2026-07-01 11:17:47,599 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:47] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 11:17:47,602 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:47] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 11:17:47,608 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:47] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-01 11:17:47,609 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:47] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 11:17:47,610 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:47] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-01 11:17:58,091 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:58] "GET /logs/?page=2&q=&status=&source=&start=&end= HTTP/1.1" 200 -
+2026-07-01 11:17:58,116 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 11:17:58,117 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:58] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 11:17:58,120 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:58] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 11:17:58,124 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:58] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-01 11:17:58,124 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:17:58] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-01 11:18:01,799 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:18:01] "GET /settings/ HTTP/1.1" 200 -
+2026-07-01 11:18:01,816 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:18:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 11:18:01,818 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:18:01] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 11:18:01,824 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:18:01] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 11:18:01,827 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:18:01] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-01 11:18:01,828 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:18:01] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-01 11:18:16,391 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:18:16] "[32mPOST /settings/ HTTP/1.1[0m" 302 -
+2026-07-01 11:18:16,399 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:18:16] "GET /settings/ HTTP/1.1" 200 -
+2026-07-01 11:18:16,432 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:18:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 11:18:16,433 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:18:16] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 11:18:16,434 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:18:16] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 11:18:16,436 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:18:16] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-01 11:18:16,441 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:18:16] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-01 11:21:58,336 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:21:58] "GET / HTTP/1.1" 200 -
+2026-07-01 11:21:58,358 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:21:58] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-01 11:21:58,362 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:21:58] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-01 11:21:58,365 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:21:58] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-01 11:21:58,368 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:21:58] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-01 11:21:58,371 INFO [werkzeug] 127.0.0.1 - - [01/Jul/2026 11:21:58] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-03 10:47:12,351 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-03 10:47:12,432 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-03 10:47:12,432 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-03 10:47:26,380 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:47:26] "[32mGET / HTTP/1.1[0m" 302 -
+2026-07-03 10:47:26,429 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:47:26] "GET /login HTTP/1.1" 200 -
+2026-07-03 10:47:37,380 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:47:37] "POST /login HTTP/1.1" 200 -
+2026-07-03 10:47:45,314 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:47:45] "POST /login HTTP/1.1" 200 -
+2026-07-03 10:48:14,612 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:14] "[32mGET / HTTP/1.1[0m" 302 -
+2026-07-03 10:48:14,618 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:14] "GET /login HTTP/1.1" 200 -
+2026-07-03 10:48:15,895 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-07-03 10:48:30,808 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:30] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-07-03 10:48:30,889 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:30] "GET / HTTP/1.1" 200 -
+2026-07-03 10:48:31,044 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:31] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-03 10:48:31,044 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:31] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-03 10:48:31,048 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:31] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-03 10:48:31,053 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:31] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-03 10:48:31,056 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:31] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-03 10:48:44,846 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:44] "GET /logs/ HTTP/1.1" 200 -
+2026-07-03 10:48:44,874 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:44] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-03 10:48:44,876 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:44] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-03 10:48:44,881 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:44] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-03 10:48:44,885 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:44] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-03 10:48:44,886 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:44] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-03 10:48:51,142 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:51] "GET /alerts/ HTTP/1.1" 200 -
+2026-07-03 10:48:51,169 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-03 10:48:51,175 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:51] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-03 10:48:51,175 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:51] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-03 10:48:51,176 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:51] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-03 10:48:51,177 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 10:48:51] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:41:26,955 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-03 16:41:26,992 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-03 16:41:26,992 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-03 16:41:40,563 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:41:40] "GET / HTTP/1.1" 200 -
+2026-07-03 16:41:40,694 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:41:40] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-03 16:41:40,695 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:41:40] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-03 16:41:40,713 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:41:40] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:41:40,717 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:41:40] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-03 16:41:40,725 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:41:40] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:41:44,302 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:41:44] "[32mPOST /logout HTTP/1.1[0m" 302 -
+2026-07-03 16:41:44,316 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:41:44] "GET /login HTTP/1.1" 200 -
+2026-07-03 16:42:48,558 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:42:48] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-07-03 16:42:48,582 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:42:48] "GET / HTTP/1.1" 200 -
+2026-07-03 16:42:48,617 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:42:48] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-03 16:42:48,624 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:42:48] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-03 16:42:48,625 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:42:48] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:42:48,627 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:42:48] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-03 16:42:48,629 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:42:48] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:42:55,104 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:42:55] "GET /logs/ HTTP/1.1" 200 -
+2026-07-03 16:42:55,130 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:42:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-03 16:42:55,133 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:42:55] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-03 16:42:55,134 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:42:55] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:42:55,142 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:42:55] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:42:55,143 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:42:55] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-03 16:45:51,552 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:45:51] "GET / HTTP/1.1" 200 -
+2026-07-03 16:45:51,586 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:45:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-03 16:45:51,606 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:45:51] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:45:51,607 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:45:51] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-03 16:45:51,613 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:45:51] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:45:51,615 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:45:51] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-03 16:45:57,962 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:45:57] "GET /analytics/ HTTP/1.1" 200 -
+2026-07-03 16:45:57,989 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:45:57] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-03 16:45:57,993 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:45:57] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-03 16:45:57,997 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:45:57] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:45:58,000 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:45:58] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-03 16:45:58,002 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:45:58] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:06,660 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:06] "GET /alerts/ HTTP/1.1" 200 -
+2026-07-03 16:46:06,690 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:06] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-03 16:46:06,693 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:06] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:06,698 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:06] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:06,699 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:06] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:06,702 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:06] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:08,157 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:08] "GET /settings/ HTTP/1.1" 200 -
+2026-07-03 16:46:08,182 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:08] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-03 16:46:08,183 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:08] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:08,191 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:08] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:08,192 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:08] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:08,193 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:08] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:10,542 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:10] "GET /login HTTP/1.1" 200 -
+2026-07-03 16:46:21,182 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:21] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-07-03 16:46:21,203 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:21] "GET / HTTP/1.1" 200 -
+2026-07-03 16:46:21,242 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:21] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:21,242 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:21] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-03 16:46:21,247 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:21] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:21,250 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:21] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:21,252 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:21] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:25,427 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:25] "GET /about HTTP/1.1" 200 -
+2026-07-03 16:46:25,453 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-03 16:46:25,457 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:25] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:25,460 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:25] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:25,463 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:25] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:25,469 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:25] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:29,863 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:29] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-03 16:46:30,731 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:30] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-03 16:46:30,910 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:30] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-03 16:46:31,089 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:31] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-03 16:46:31,304 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:31] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-03 16:46:31,515 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:31] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-03 16:46:37,652 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:37] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-03 16:46:55,426 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:55] "GET / HTTP/1.1" 200 -
+2026-07-03 16:46:55,467 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:55] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-03 16:46:55,472 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:55] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:55,477 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:55] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:55,478 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:55] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-03 16:46:55,482 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:46:55] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:47:05,241 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:47:05] "GET /logs/ HTTP/1.1" 200 -
+2026-07-03 16:47:05,274 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:47:05] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-03 16:47:05,279 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:47:05] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-03 16:47:05,282 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:47:05] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:47:05,284 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:47:05] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-03 16:47:05,287 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:47:05] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:47:19,393 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:47:19] "GET /logs/?q=ADMIN&status=&source=&start=&end= HTTP/1.1" 200 -
+2026-07-03 16:47:19,426 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:47:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-03 16:47:19,430 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:47:19] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-03 16:47:19,430 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:47:19] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-03 16:47:19,436 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:47:19] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-03 16:47:19,437 INFO [werkzeug] 127.0.0.1 - - [03/Jul/2026 16:47:19] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 00:58:39,596 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-06 00:58:39,727 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-06 00:58:39,728 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-06 01:01:03,105 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-06 01:01:03,216 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-06 01:01:03,217 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-06 01:01:28,520 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:01:28] "[32mGET / HTTP/1.1[0m" 302 -
+2026-07-06 01:01:28,607 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:01:28] "GET /login HTTP/1.1" 200 -
+2026-07-06 01:01:37,724 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:01:37] "[32mGET / HTTP/1.1[0m" 302 -
+2026-07-06 01:01:37,743 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:01:37] "GET /login HTTP/1.1" 200 -
+2026-07-06 01:01:38,599 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:01:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-07-06 01:01:49,245 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:01:49] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-07-06 01:01:49,860 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:01:49] "GET / HTTP/1.1" 200 -
+2026-07-06 01:01:51,027 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:01:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:01:51,033 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:01:51] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:01:51,034 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:01:51] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:01:51,048 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:01:51] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:01:51,121 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:01:51] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:02:00,642 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:02:00] "GET /logs/ HTTP/1.1" 200 -
+2026-07-06 01:02:00,717 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:02:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:02:00,727 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:02:00] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:02:00,740 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:02:00] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:02:00,743 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:02:00] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:02:00,749 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:02:00] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:02:38,604 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:02:38] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-06 01:02:41,121 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:02:41] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-06 01:02:42,511 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:02:42] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-06 01:04:06,400 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:04:06] "GET /login HTTP/1.1" 200 -
+2026-07-06 01:04:07,102 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:04:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-07-06 01:04:17,512 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:04:17] "[32mPOST /login HTTP/1.1[0m" 302 -
+2026-07-06 01:04:17,537 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:04:17] "GET / HTTP/1.1" 200 -
+2026-07-06 01:04:17,907 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:04:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:04:17,908 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:04:17] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:04:17,911 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:04:17] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:04:17,914 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:04:17] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:04:17,919 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:04:17] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:05:27,772 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:05:27] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-06 01:05:38,196 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:05:38] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-06 01:05:42,106 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:05:42] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-06 01:06:23,485 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:23] "GET /api/stats HTTP/1.1" 200 -
+2026-07-06 01:06:23,839 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:23] "GET / HTTP/1.1" 200 -
+2026-07-06 01:06:23,887 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:23] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:06:24,094 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:24] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:06:24,207 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:24] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:06:24,208 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:24] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:06:24,215 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:24] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:06:32,995 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:32] "GET /logs/ HTTP/1.1" 200 -
+2026-07-06 01:06:33,226 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:06:33,234 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:33] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:06:33,361 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:33] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:06:33,362 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:33] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:06:33,364 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:33] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:06:39,494 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:39] "GET /alerts/ HTTP/1.1" 200 -
+2026-07-06 01:06:39,749 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:06:39,854 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:39] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:06:39,855 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:39] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:06:39,856 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:39] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:06:39,858 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:06:39] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:07:00,738 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:07:00] "GET / HTTP/1.1" 200 -
+2026-07-06 01:07:00,961 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:07:00] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:07:00,991 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:07:00] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:07:01,111 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:07:01] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:07:01,112 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:07:01] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:07:01,112 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:07:01] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:28:50,242 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:28:50] "GET / HTTP/1.1" 200 -
+2026-07-06 01:28:50,282 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:28:50] "GET /static/css/style.css HTTP/1.1" 200 -
+2026-07-06 01:28:50,451 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:28:50] "GET /static/js/dashboard.js HTTP/1.1" 200 -
+2026-07-06 01:28:50,597 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:28:50] "GET /static/js/charts.js HTTP/1.1" 200 -
+2026-07-06 01:28:50,597 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:28:50] "GET /static/js/theme.js HTTP/1.1" 200 -
+2026-07-06 01:28:50,630 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:28:50] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:28:59,602 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:28:59] "GET /logs/ HTTP/1.1" 200 -
+2026-07-06 01:28:59,813 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:28:59] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:28:59,814 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:28:59] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:28:59,957 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:28:59] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:28:59,958 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:28:59] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:28:59,960 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:28:59] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:29:16,102 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:16] "GET /alerts/ HTTP/1.1" 200 -
+2026-07-06 01:29:16,395 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:29:16,442 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:16] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:29:16,443 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:16] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:29:16,442 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:16] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:29:16,446 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:16] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:29:33,036 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:33] "GET /logs/ HTTP/1.1" 200 -
+2026-07-06 01:29:33,263 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:33] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:29:33,295 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:33] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:29:33,380 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:33] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:29:33,382 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:33] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:29:33,383 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:33] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:29:43,098 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:43] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-06 01:29:44,982 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:44] "GET /api/alerts HTTP/1.1" 200 -
+2026-07-06 01:29:56,295 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:56] "GET / HTTP/1.1" 200 -
+2026-07-06 01:29:56,598 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:56] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:29:56,647 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:56] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:29:56,647 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:56] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:29:56,648 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:56] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:29:56,649 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:29:56] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:30:09,504 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:09] "GET /settings/ HTTP/1.1" 200 -
+2026-07-06 01:30:09,735 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:09] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:30:09,765 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:09] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:30:09,900 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:09] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:30:09,901 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:09] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:30:09,905 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:09] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:30:15,897 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:15] "GET /about HTTP/1.1" 200 -
+2026-07-06 01:30:16,213 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:30:16,249 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:16] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:30:16,249 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:16] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:30:16,250 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:16] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:30:16,252 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:16] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:30:17,882 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:17] "[35m[1mGET /analytics/ HTTP/1.1[0m" 500 -
+2026-07-06 01:30:17,944 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:17] "GET /analytics/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2026-07-06 01:30:17,950 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:17] "GET /analytics/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2026-07-06 01:30:18,319 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:18] "GET /analytics/?__debugger__=yes&cmd=resource&f=console.png&s=uG0pY7qveASjwOu9ASvZ HTTP/1.1" 200 -
+2026-07-06 01:30:18,565 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:18] "GET /analytics/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2026-07-06 01:30:21,011 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:21] "[35m[1mGET /analytics/ HTTP/1.1[0m" 500 -
+2026-07-06 01:30:21,297 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:21] "[36mGET /analytics/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:30:21,360 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:21] "[36mGET /analytics/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-07-06 01:30:21,701 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:21] "[36mGET /analytics/?__debugger__=yes&cmd=resource&f=console.png&s=uG0pY7qveASjwOu9ASvZ HTTP/1.1[0m" 304 -
+2026-07-06 01:30:21,951 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:30:21] "[36mGET /analytics/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2026-07-06 01:41:22,549 INFO [monitor.watcher] Started monitoring sample_logs\login.log
+2026-07-06 01:41:52,562 INFO [monitor.watcher] Started monitoring data\login_attempts.log
+2026-07-06 01:43:31,468 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:43:31] "[35m[1mGET /analytics/ HTTP/1.1[0m" 500 -
+2026-07-06 01:43:31,503 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:43:31] "[36mGET /analytics/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:43:31,703 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:43:31] "[36mGET /analytics/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-07-06 01:43:32,030 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:43:32] "[36mGET /analytics/?__debugger__=yes&cmd=resource&f=console.png&s=uG0pY7qveASjwOu9ASvZ HTTP/1.1[0m" 304 -
+2026-07-06 01:43:32,297 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:43:32] "[36mGET /analytics/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2026-07-06 01:43:33,764 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:43:33] "[35m[1mGET /analytics/ HTTP/1.1[0m" 500 -
+2026-07-06 01:43:34,054 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:43:34] "[36mGET /analytics/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:43:34,103 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:43:34] "[36mGET /analytics/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-07-06 01:43:34,430 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:43:34] "[36mGET /analytics/?__debugger__=yes&cmd=resource&f=console.png&s=uG0pY7qveASjwOu9ASvZ HTTP/1.1[0m" 304 -
+2026-07-06 01:43:34,696 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:43:34] "[36mGET /analytics/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2026-07-06 01:43:39,301 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:43:39] "GET / HTTP/1.1" 200 -
+2026-07-06 01:43:39,357 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:43:39] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:43:39,669 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:43:39] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:43:39,671 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:43:39] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:43:39,676 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:43:39] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:43:39,679 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:43:39] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:03,798 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:03] "GET /logs/ HTTP/1.1" 200 -
+2026-07-06 01:44:04,000 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:04] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:44:04,031 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:04] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:04,145 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:04] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:04,147 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:04] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:04,148 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:04] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:15,828 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:15] "GET /about HTTP/1.1" 200 -
+2026-07-06 01:44:16,133 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:44:16,197 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:16] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:16,197 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:16] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:16,201 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:16] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:16,200 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:16] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:17,725 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:17] "GET /settings/ HTTP/1.1" 200 -
+2026-07-06 01:44:17,965 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:17] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:44:17,994 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:17] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:18,078 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:18] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:18,079 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:18] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:18,084 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:18] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:26,300 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:26] "GET / HTTP/1.1" 200 -
+2026-07-06 01:44:26,595 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:44:26,680 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:26] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:26,681 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:26] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:26,682 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:26] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:26,683 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:26] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:44:59,856 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:44:59] "[35m[1mGET /analytics/ HTTP/1.1[0m" 500 -
+2026-07-06 01:45:00,078 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:00] "[36mGET /analytics/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:45:00,109 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:00] "[36mGET /analytics/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2026-07-06 01:45:00,191 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:00] "[36mGET /analytics/?__debugger__=yes&cmd=resource&f=console.png&s=uG0pY7qveASjwOu9ASvZ HTTP/1.1[0m" 304 -
+2026-07-06 01:45:19,858 INFO [monitor.watcher] Started monitoring data\login_attempts.log
+2026-07-06 01:45:19,904 INFO [werkzeug] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-07-06 01:45:19,904 INFO [werkzeug] [33mPress CTRL+C to quit[0m
+2026-07-06 01:45:25,965 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:25] "GET /analytics/ HTTP/1.1" 200 -
+2026-07-06 01:45:26,053 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:26] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:45:26,206 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:26] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:45:26,320 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:26] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:45:26,322 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:26] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:45:26,324 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:26] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:45:34,999 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:34] "GET / HTTP/1.1" 200 -
+2026-07-06 01:45:35,214 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:45:35,244 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:35] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:45:35,344 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:35] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:45:35,344 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:35] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:45:35,348 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:35] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:45:52,735 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:52] "GET /logs/ HTTP/1.1" 200 -
+2026-07-06 01:45:53,017 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:53] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:45:53,077 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:53] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:45:53,078 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:53] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:45:53,080 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:53] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:45:53,081 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:45:53] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:12,247 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:12] "GET / HTTP/1.1" 200 -
+2026-07-06 01:46:12,474 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:46:12,494 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:12] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:12,611 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:12] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:12,631 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:12] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:12,631 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:12] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:18,987 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:18] "GET /analytics/ HTTP/1.1" 200 -
+2026-07-06 01:46:19,296 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:46:19,341 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:19] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:19,342 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:19] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:19,346 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:19] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:19,347 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:19] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:24,422 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:24] "GET /settings/ HTTP/1.1" 200 -
+2026-07-06 01:46:24,650 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:24] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:46:24,675 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:24] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:24,787 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:24] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:24,788 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:24] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:24,791 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:24] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:32,123 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:32] "GET /about HTTP/1.1" 200 -
+2026-07-06 01:46:32,426 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:32] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:46:32,490 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:32] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:32,494 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:32] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:32,504 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:32] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:32,505 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:32] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:35,337 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:35] "GET / HTTP/1.1" 200 -
+2026-07-06 01:46:35,572 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:35] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:46:35,578 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:35] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:35,686 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:35] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:35,688 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:35] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:46:35,690 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:46:35] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:47:01,679 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:47:01] "GET /logs/ HTTP/1.1" 200 -
+2026-07-06 01:47:01,980 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:47:01] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2026-07-06 01:47:02,030 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:47:02] "[36mGET /static/js/theme.js HTTP/1.1[0m" 304 -
+2026-07-06 01:47:02,032 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:47:02] "[36mGET /static/js/charts.js HTTP/1.1[0m" 304 -
+2026-07-06 01:47:02,032 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:47:02] "[36mGET /static/js/dashboard.js HTTP/1.1[0m" 304 -
+2026-07-06 01:47:02,032 INFO [werkzeug] 127.0.0.1 - - [06/Jul/2026 01:47:02] "[36mGET /static/js/alerts.js HTTP/1.1[0m" 304 -
+2026-07-06 02:04:53,421 INFO [monitor.watcher] Started monitoring data\login_attempts.log

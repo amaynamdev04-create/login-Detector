@@ -1,0 +1,68 @@
+{% extends "layout.html" %}
+{% block title %}Alerts | {{ config.APP_DISPLAY_NAME }}{% endblock %}
+{% block content %}
+<section class="page-stack">
+    <article class="panel-card">
+        <div class="panel-heading">
+            <div>
+                <p class="eyebrow">Incident Queue</p>
+                <h1>Alert History</h1>
+            </div>
+            <form method="get" class="filter-inline">
+                <select name="severity" class="form-control">
+                    <option value="">All severities</option>
+                    <option value="Critical" {% if severity == 'Critical' %}selected{% endif %}>Critical</option>
+                    <option value="High" {% if severity == 'High' %}selected{% endif %}>High</option>
+                    <option value="Medium" {% if severity == 'Medium' %}selected{% endif %}>Medium</option>
+                    <option value="Low" {% if severity == 'Low' %}selected{% endif %}>Low</option>
+                </select>
+                <input type="text" name="source" value="{{ source }}" placeholder="Source" class="form-control">
+                <button type="submit" class="primary-button">Filter</button>
+            </form>
+        </div>
+    </article>
+
+    <div class="card-grid">
+        {% for item in alerts.items %}
+            <article class="panel-card" x-data="{ open: false }">
+                <div class="panel-heading">
+                    <div>
+                        <p class="eyebrow">Alert #{{ item.id }}</p>
+                        <h2>{{ item.username }} from {{ item.ip_address }}</h2>
+                    </div>
+                    <span class="badge {% if item.severity == 'Critical' %}badge-danger{% else %}badge-warning{% endif %}">{{ item.severity }}</span>
+                </div>
+                <p>{{ item.description }}</p>
+                <div class="chip-row">
+                    <span class="status-chip">Source: {{ item.source }}</span>
+                    <span class="status-chip">Attempts: {{ item.failed_attempts }}</span>
+                    <span class="status-chip">{{ item.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</span>
+                </div>
+                <button type="button" class="link-button" @click="open = !open">Toggle details</button>
+                <div class="detail-panel" x-show="open" x-transition>
+                    <p><strong>Indicator:</strong> {{ item.ip_address }}</p>
+                    <p><strong>User:</strong> {{ item.username }}</p>
+                    <p><strong>Action:</strong> {{ item.action }}</p>
+                    <p><strong>Source:</strong> {{ item.source }}</p>
+                </div>
+            </article>
+        {% else %}
+            <article class="panel-card">
+                <div class="empty-state">No alerts are available for the selected filters.</div>
+            </article>
+        {% endfor %}
+    </div>
+
+    <div class="pagination-row">
+        <span>Page {{ alerts.page }} of {{ alerts.pages or 1 }} | {{ alerts.total }} alerts</span>
+        <div class="pagination-actions">
+            {% if alerts.has_prev %}
+                <a class="secondary-button" href="{{ url_for('alerts.list_alerts', page=alerts.prev_num, severity=severity, source=source) }}">Previous</a>
+            {% endif %}
+            {% if alerts.has_next %}
+                <a class="secondary-button" href="{{ url_for('alerts.list_alerts', page=alerts.next_num, severity=severity, source=source) }}">Next</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

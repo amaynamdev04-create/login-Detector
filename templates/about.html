@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block title %}About | {{ config.APP_DISPLAY_NAME }}{% endblock %}
+{% block content %}
+<section class="page-stack">
+    <article class="panel-card">
+        <p class="eyebrow">Platform Overview</p>
+        <h1>{{ config.APP_DISPLAY_NAME }}</h1>
+        <p>This application captures login attempts, enriches them with public-IP-based location data when available, scores risk, detects brute-force behavior, and exposes both analyst UI and JSON APIs.</p>
+    </article>
+
+    <div class="content-grid">
+        <article class="panel-card">
+            <h2>How detection works</h2>
+            <p>Repeated failures from the same public IP or against the same username inside the configured window generate a critical alert and temporary IP block.</p>
+        </article>
+        <article class="panel-card">
+            <h2>Data model</h2>
+            <p>Each login attempt stores public IP, optional private IP, IP version, source, country, country code, region, city, timezone, ISP, and optional coordinates.</p>
+        </article>
+        <article class="panel-card">
+            <h2>Deployment model</h2>
+            <p>The app supports local file watching for traditional deployments and request-driven ingestion for serverless deployments such as Vercel.</p>
+        </article>
+        <article class="panel-card">
+            <h2>Ownership</h2>
+            <p>{{ config.APP_OWNER_NAME }}</p>
+        </article>
+    </div>
+</section>
+{% endblock %}

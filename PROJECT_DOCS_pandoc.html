@@ -1,0 +1,347 @@
+<h1 id="login-attempt-monitor-project-documentation">Login Attempt
+Monitor — Project Documentation</h1>
+<p>This document explains the Login Attempt Monitor codebase in detail
+so you can present it to others. It describes the architecture, runtime
+flow, important files, how blocking works, where timestamps are handled,
+how to run and test the project, and suggested demo steps.</p>
+<hr />
+<h2 id="quick-architecture-summary">Quick Architecture Summary</h2>
+<ul>
+<li>Purpose: Watch authentication log lines in real time, detect
+brute-force attempts, temporarily block offending IPs, persist
+telemetry, and expose an analyst UI + JSON API.</li>
+<li>Tech: Flask, SQLAlchemy (SQLite), watchdog for file monitoring,
+simple templated frontend (Tailwind/JS assets included), unit tests with
+pytest.</li>
+</ul>
+<p>Top-level components: - <code>app.py</code> — application factory and
+startup orchestration - <code>config.py</code> — configuration (env /
+defaults) - <code>database/</code> — SQLAlchemy DB, models, and
+migration helpers - <code>monitor/</code> — log parser, brute-force
+detection, alert creation, file watcher - <code>routes/</code> — UI
+pages and API blueprint endpoints - <code>services/</code> —
+authentication helpers, risk scoring, exporting, notifications,
+statistics - <code>utils/</code> — small helpers, constants, logger -
+<code>templates/</code> &amp; <code>static/</code> — UI</p>
+<hr />
+<h2 id="execution-flow-high-level">Execution Flow (High Level)</h2>
+<ol type="1">
+<li><code>app.py</code> creates the Flask app using
+<code>create_app()</code>.</li>
+<li>App config is loaded from <code>config.py</code> (env overrides
+possible via <code>.env</code>).</li>
+<li>Logging is configured and the database is initialized
+(<code>database/init_db.py</code>).</li>
+<li>Blueprints in <code>routes/</code> are registered (UI and API).</li>
+<li>The <code>monitoring_service</code> from
+<code>monitor/watcher.py</code> is configured and started. It:
+<ul>
+<li>Ensures the log file exists</li>
+<li>Reads any initial lines</li>
+<li>Starts a <code>watchdog.Observer</code> to watch the file’s
+directory for modifications</li>
+</ul></li>
+<li>When the log file changes, new lines are parsed
+(<code>monitor/parser.py</code>) into structured events.</li>
+<li>Each parsed event is persisted as a <code>LoginAttempt</code> and
+scored via <code>services/risk_engine.py</code>.</li>
+<li>The <code>monitor.detector</code> (a
+<code>BruteForceDetector</code>) records attempts and detects repeated
+failures according to a threshold and time window.</li>
+<li>When a brute-force is detected,
+<code>monitor/alerts.create_alert</code> is called — it creates an
+<code>Alert</code>, writes a <code>BlockedIP</code> (DB) or creates an
+in-memory runtime block for manual blacklists, and the notification
+system logs and optionally sends notifications.</li>
+<li>The UI and API (e.g., <code>/api/blocked</code>,
+<code>/api/integrations/check-block</code>) reflect current blocked IPs
+and alerts. External websites are expected to call the check-block API
+before processing logins.</li>
+</ol>
+<hr />
+<h2 id="key-data-models-databasemodels.py">Key Data Models
+(<code>database/models.py</code>)</h2>
+<ul>
+<li><code>LoginAttempt</code> — stores each parsed login attempt
+(timestamp, username, ip, source, status, message, risk_score,
+country).</li>
+<li><code>Alert</code> — stores alerts raised by the detection
+engine.</li>
+<li><code>BlockedIP</code> — stores temporarily blocked IPs with
+<code>blocked_at</code> and <code>expires_at</code>, along with
+<code>source</code> and <code>reason</code> fields.</li>
+</ul>
+<p>Utility: <code>utcnow()</code> returns timezone-aware UTC timestamps
+used as SQL defaults.</p>
+<hr />
+<h2 id="important-files-what-they-do">Important Files &amp; What They
+Do</h2>
+<p>(Note: file names wrapped in backticks match your workspace.)</p>
+<ul>
+<li><p><code>app.py</code> — bootstraps the Flask app, initializes DB,
+registers routes, and starts the monitoring service.</p></li>
+<li><p><code>config.py</code> — central configuration object. Important
+settings:</p>
+<ul>
+<li><code>ALERT_THRESHOLD</code> (fail attempts to trigger alert)</li>
+<li><code>ALERT_WINDOW_SECONDS</code> (time window to consider)</li>
+<li><code>BLOCK_DURATION_MINUTES</code> (how long to block after
+detection)</li>
+<li><code>BLACKLIST_IPS</code> / <code>WHITELIST_IPS</code> (manual
+lists)</li>
+<li><code>LOG_FILE_PATH</code> (file to watch)</li>
+</ul></li>
+<li><p><code>database/database.py</code> — SQLAlchemy <code>db</code>
+instance for ORM usage.</p></li>
+<li><p><code>database/models.py</code> — SQLAlchemy models and
+<code>to_dict()</code> helpers used by APIs/UI.</p></li>
+<li><p><code>database/init_db.py</code> — helper to create/upgrade the
+SQLite schema used at app startup.</p></li>
+<li><p><code>monitor/watcher.py</code> — the
+<code>MonitoringService</code>:</p>
+<ul>
+<li>Reads new lines from the configured <code>LOG_FILE_PATH</code> and
+persists them.</li>
+<li>Uses <code>BruteForceDetector</code> to record attempts and decide
+when to create alerts.</li>
+<li>When detecting a brute-force, calls <code>create_alert()</code>
+which writes a <code>BlockedIP</code> and creates <code>Alert</code>
+objects.</li>
+</ul></li>
+<li><p><code>monitor/parser.py</code> — parses raw log lines into a
+structured dict with keys like <code>timestamp</code>,
+<code>username</code>, <code>ip_address</code>, <code>status</code>,
+<code>message</code>, <code>source</code>. It normalizes timestamps to
+UTC.</p></li>
+<li><p><code>monitor/detector.py</code> — contains the
+<code>BruteForceDetector</code> logic: stores short-term history (in
+memory) keyed by IP/username, evaluates counts within configured time
+windows and returns a context object when an alert condition is
+reached.</p></li>
+<li><p><code>monitor/alerts.py</code> — coordinates alert creation and
+persistence. Writes <code>Alert</code> and <code>BlockedIP</code> rows
+and logs a notification.</p></li>
+<li><p><code>routes/*</code> — UI and API endpoints. Key routes:</p>
+<ul>
+<li><code>routes/auth.py</code> — demo login flow (uses
+<code>services.authentication.get_active_block()</code> to deny blocked
+IPs before authenticating)</li>
+<li><code>routes/api.py</code> — JSON endpoints for logs, alerts,
+analytics, blocked IPs, and ingestion endpoints for external websites
+(<code>/api/integrations/*</code>).</li>
+<li><code>routes/settings.py</code> — allows runtime editing of
+<code>BLACKLIST_IPS</code>, <code>WHITELIST_IPS</code>, thresholds and
+durations; updates the <code>monitoring_service</code> accordingly.</li>
+<li><code>routes/logs.py</code>, <code>routes/alerts.py</code>,
+<code>routes/dashboard.py</code>, <code>routes/analytics.py</code> — UI
+pages for analyst interaction.</li>
+</ul></li>
+<li><p><code>services/authentication.py</code> — helper functions used
+by the demo login page and APIs:</p>
+<ul>
+<li><code>get_client_ip(request)</code> — resolves
+<code>X-Forwarded-For</code> or <code>remote_addr</code> and now
+normalizes IPs via <code>normalize_ip()</code> (handles
+<code>::1</code>, IPv4-mapped IPv6, and IP:port forms).</li>
+<li><code>get_active_block(ip_address)</code> — returns either a DB
+<code>BlockedIP</code> record or an in-memory <code>RuntimeBlock</code>
+for manual blacklist entries. It also checks expiry and returns
+<code>None</code> for expired blocks.</li>
+<li><code>format_block_time(value)</code> — returns a user-friendly
+local timestamp string for UI messages; it was adjusted to show local
+offsets (e.g., <code>+02:00</code>) rather than raw <code>UTC</code>
+only.</li>
+<li><code>write_login_event(...)</code> — appends a log line to
+<code>LOG_FILE_PATH</code> and triggers immediate monitoring
+ingestion.</li>
+</ul></li>
+<li><p><code>services/risk_engine.py</code> — a small scoring routine
+that computes a risk score for attempts.</p></li>
+<li><p><code>services/notification.py</code> — emits notifications and
+logs alerts (could be extended to email/webhook).</p></li>
+<li><p><code>services/statistics.py</code> — composes dashboard
+summaries and serializes blocked IPs for the UI.</p></li>
+<li><p><code>services/exporter.py</code> — CSV export functionality for
+logs/alerts.</p></li>
+<li><p><code>utils/helper.py</code> — small helpers (e.g., CSV parsing
+for settings, date helpers, country inference stub).</p></li>
+<li><p><code>utils/logger.py</code> — logging configuration.</p></li>
+<li><p><code>templates/</code> and <code>static/</code> — frontend
+files: pages for login, dashboard, alerts, logs, settings; JS widgets
+and CSS.</p></li>
+<li><p><code>tests/</code> — pytest test suite covering parser,
+detector, alerting, authentication, and integration API checks.</p></li>
+</ul>
+<hr />
+<h2 id="blocking-blacklisting-logic-detailed">Blocking / Blacklisting
+Logic (Detailed)</h2>
+<p>There are two ways an IP becomes blocked:</p>
+<ol type="1">
+<li>Automatic blocking from the detector:
+<ul>
+<li><code>monitor/detector.py</code> tracks failed attempts in
+memory.</li>
+<li>When failure counts exceed <code>ALERT_THRESHOLD</code> within
+<code>ALERT_WINDOW_SECONDS</code>,
+<code>monitor/alerts.create_alert()</code> is called.</li>
+<li><code>create_alert</code> writes an <code>Alert</code> and creates a
+<code>BlockedIP</code> row in the DB with <code>blocked_at</code> and
+<code>expires_at</code> (<code>BLOCK_DURATION_MINUTES</code> in
+<code>config</code>).</li>
+<li>The monitoring service’s <code>process_entry()</code> function
+prevents any attempts logged from whitelisted IPs from triggering
+alerts.</li>
+</ul></li>
+<li>Manual blacklist (settings):
+<ul>
+<li><code>routes/settings.py</code> allows editing
+<code>BLACKLIST_IPS</code> at runtime. Those are stored in
+<code>current_app.config["BLACKLIST_IPS"]</code>.</li>
+<li>When <code>get_active_block()</code> is called and the IP is present
+in <code>BLACKLIST_IPS</code>, a runtime-only <code>RuntimeBlock</code>
+object is returned immediately (no DB row required). This makes the
+block effective immediately without DB writes.</li>
+</ul></li>
+</ol>
+<p>Normalization caveat (recent fix): IP values from clients may be
+<code>::1</code> (IPv6 loopback) or <code>::ffff:127.0.0.1</code>
+(IPv4-mapped IPv6). To ensure manual blacklists like
+<code>127.0.0.1</code> match these forms,
+<code>services/authentication.normalize_ip()</code> converts these forms
+to <code>127.0.0.1</code> so blacklist checks succeed.</p>
+<p>Where blocking is enforced: - The demo login page
+(<code>routes/auth.py</code>) calls <code>get_active_block()</code> and
+if a block is active, denies the login and flashes a message. - The API
+endpoint <code>/api/integrations/check-block</code> exposes the active
+block status to external sites.</p>
+<hr />
+<h2 id="time-handling">Time Handling</h2>
+<ul>
+<li>All parsed log timestamps are normalized to timezone-aware UTC
+datetimes in the parser.</li>
+<li>Database timestamps are stored with timezone awareness
+(<code>DateTime(timezone=True)</code>).</li>
+<li><code>format_block_time()</code> presents times in the server’s
+local timezone with a friendly format like
+<code>01 Jul 2026, 03:05:00 PM +02:00</code> for clarity during
+demos.</li>
+</ul>
+<hr />
+<h2 id="api-endpoints-usage">API Endpoints &amp; Usage</h2>
+<p>Key endpoints (see <code>routes/api.py</code>): -
+<code>GET /api/blocked</code> — list current blocked IPs as JSON. -
+<code>GET /api/integrations/check-block?ip_address=&lt;ip&gt;</code> —
+check if an IP is currently blocked (requires <code>X-API-Key</code>). -
+<code>POST /api/integrations/login-attempt</code> — ingest a login
+attempt from external websites (requires <code>X-API-Key</code>). -
+Additional endpoints: logs, alerts, analytics, stats used by the
+dashboard.</p>
+<p>Integration pattern for external sites: 1. Call check-block before
+processing a login. 2. If not blocked, process credentials. 3. POST the
+login attempt outcome to
+<code>/api/integrations/login-attempt</code>.</p>
+<hr />
+<h2 id="running-locally-how-to-demo">Running Locally (how to demo)</h2>
+<ol type="1">
+<li>Create a venv and install dependencies:</li>
+</ol>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv .venv</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">.venv\Scripts\activate</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code></pre></div>
+<ol start="2" type="1">
+<li>Start the app:</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> app.py</span></code></pre></div>
+<ol start="3" type="1">
+<li><p>Open the UI: <code>http://127.0.0.1:5000</code> and use the
+built-in login page to simulate failures.</p></li>
+<li><p>To see blocking happen:</p></li>
+</ol>
+<ul>
+<li>Ensure <code>127.0.0.1</code> is NOT in
+<code>WHITELIST_IPS</code>.</li>
+<li>Enter invalid credentials repeatedly from the same browser; after
+<code>ALERT_THRESHOLD</code> failures within
+<code>ALERT_WINDOW_SECONDS</code> the system will create an alert and
+block the IP for <code>BLOCK_DURATION_MINUTES</code>.</li>
+<li>You should see a friendly message in the login page with the local
+expiry time.</li>
+</ul>
+<ol start="5" type="1">
+<li>To test manual blacklist:</li>
+</ol>
+<ul>
+<li>Go to <code>Settings</code> in the UI and add <code>127.0.0.1</code>
+to the blacklist and save.</li>
+<li>Attempt to login — it will be blocked immediately and the login
+attempt will still be written to the log (the app logs blocked attempts
+for telemetry).</li>
+</ul>
+<hr />
+<h2 id="running-tests">Running Tests</h2>
+<p>From repository root, with the venv active:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> pytest</span></code></pre></div>
+<p>The repo includes unit tests that validate parser parsing, detector
+logic, alerts, API integration, and the blacklist behavior.</p>
+<hr />
+<h2
+id="how-to-explain-this-to-your-teacher-suggested-talking-points">How to
+Explain This to Your Teacher (Suggested Talking Points)</h2>
+<ol type="1">
+<li>Start with the problem: centralized detection of brute-force across
+multiple sites using log ingestion.</li>
+<li>Explain the flow: ingestion → parsing → scoring → detection →
+alerting → blocking → UI/API.</li>
+<li>Walk through <code>monitor/</code> to show how file watching and
+parsing work in near-real time.</li>
+<li>Show the DB models in <code>database/models.py</code> to explain
+persisted telemetry.</li>
+<li>Demonstrate blacklisting and how we normalize IP addresses so manual
+blacklists are reliable.</li>
+<li>Show <code>routes/api.py</code> and explain how other websites can
+integrate (check-block + post attempts).</li>
+<li>Run a live demo: trigger a block locally and show the dashboard and
+alerts.</li>
+<li>Point to tests as evidence of expected behavior and how to validate
+the system.</li>
+</ol>
+<hr />
+<h2 id="files-reference-short">Files Reference (Short)</h2>
+<ul>
+<li><code>app.py</code> — app factory and monitoring startup</li>
+<li><code>config.py</code> — environment configuration</li>
+<li><code>database/</code> — contains <code>models.py</code>,
+<code>database.py</code>, <code>init_db.py</code></li>
+<li><code>monitor/</code> — <code>parser.py</code>,
+<code>detector.py</code>, <code>alerts.py</code>,
+<code>watcher.py</code></li>
+<li><code>routes/</code> — <code>auth.py</code>, <code>api.py</code>,
+<code>dashboard.py</code>, <code>settings.py</code>, etc.</li>
+<li><code>services/</code> — <code>authentication.py</code>,
+<code>risk_engine.py</code>, <code>notification.py</code>,
+<code>statistics.py</code>, <code>exporter.py</code></li>
+<li><code>utils/</code> — <code>helper.py</code>,
+<code>logger.py</code>, <code>constants.py</code></li>
+<li><code>templates/</code> — Jinja2 templates for UI</li>
+<li><code>static/</code> — CSS &amp; JS used by frontend</li>
+<li><code>tests/</code> — pytest test suite</li>
+</ul>
+<hr />
+<h2 id="next-steps-optional-enhancements-you-could-mention">Next Steps
+(Optional Enhancements You Could Mention)</h2>
+<ul>
+<li>Add GeoIP enrichment for alerts (city/country in the UI).</li>
+<li>Add email/webhook alert delivery (extend
+<code>services/notification.py</code>).</li>
+<li>Improve persistence for detector state so restart doesn’t lose
+recent counts (e.g., Redis).</li>
+<li>Add RBAC for the UI.</li>
+</ul>
+<hr />
+<p>If you’d like, I can: - Convert this document into a PDF/slide deck
+for presenting to your teacher. - Add a mermaid sequence diagram showing
+the ingestion and block flow. - Expand any per-file section into more
+granular code-line explanations.</p>

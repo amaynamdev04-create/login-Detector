@@ -1,0 +1,6 @@
+2026-07-05 20:11:16.398507 ERROR Login Failed user=amay.namdev ip=127.0.0.1 source=built-in-portal meta={"public_ip":"127.0.0.1","private_ip":null,"ip_version":"IPv4","source":"built-in-portal"}
+2026-07-05 20:11:16.519166 ERROR Login Failed user=amay.namdev ip=127.0.0.1 source=built-in-portal meta={"public_ip":"127.0.0.1","private_ip":null,"ip_version":"IPv4","source":"built-in-portal"}
+2026-07-05 20:11:16.677818 ERROR Login Failed user=amay.namdev ip=127.0.0.1 source=built-in-portal meta={"public_ip":"127.0.0.1","private_ip":null,"ip_version":"IPv4","source":"built-in-portal"}
+2026-07-05 20:11:16.838752 ERROR Login Failed user=amay.namdev ip=127.0.0.1 source=built-in-portal meta={"public_ip":"127.0.0.1","private_ip":null,"ip_version":"IPv4","source":"built-in-portal"}
+2026-07-05 20:11:16.988846 ERROR Login Failed user=amay.namdev ip=127.0.0.1 source=built-in-portal meta={"public_ip":"127.0.0.1","private_ip":null,"ip_version":"IPv4","source":"built-in-portal"}
+2026-07-05 20:11:17.036244 ERROR Login Failed user=amay.namdev ip=127.0.0.1 source=built-in-portal meta={"public_ip":"127.0.0.1","private_ip":null,"ip_version":"IPv4","source":"built-in-portal"}

@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block title %}Analytics | {{ config.APP_DISPLAY_NAME }}{% endblock %}
+{% block content %}
+<section class="page-stack">
+    <div class="hero-banner">
+        <div>
+            <p class="eyebrow">Analytics</p>
+            <h1>Attack patterns across status, geography, source, and volume.</h1>
+            <p class="hero-copy">These charts are generated from the real stored event stream, not seeded records.</p>
+        </div>
+    </div>
+
+    <div class="content-grid">
+        <article class="panel-card"><div class="panel-heading"><h2>Success vs Failure</h2></div><canvas id="statusChart"></canvas></article>
+        <article class="panel-card"><div class="panel-heading"><h2>Risk Distribution</h2></div><canvas id="riskDistributionChart"></canvas></article>
+        <article class="panel-card"><div class="panel-heading"><h2>Top Attack Sources</h2></div><canvas id="attackSourcesChart"></canvas></article>
+        <article class="panel-card"><div class="panel-heading"><h2>Hourly Trend</h2></div><canvas id="hourlyTrendChart"></canvas></article>
+        <article class="panel-card"><div class="panel-heading"><h2>Source Distribution</h2></div><canvas id="siteSourcesChart"></canvas></article>
+        <article class="panel-card"><div class="panel-heading"><h2>Country Distribution</h2></div><canvas id="countryDistributionChart"></canvas></article>
+    </div>
+</section>
+
+<script id="analytics-data" type="application/json">{{ {
+    "status_breakdown": status_breakdown,
+    "risk_distribution": risk_distribution,
+    "top_attack_sources": top_attack_sources,
+    "site_sources": site_sources,
+    "country_distribution": country_distribution,
+    "hourly_trend": hourly_trend,
+    "attack_timeline": attack_timeline
+} | tojson }}</script>
+{% endblock %}

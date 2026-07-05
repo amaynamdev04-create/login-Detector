@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+instance/
+.pytest_cache/
+login_attempt_monitor.db
+exports/*.csv
+screenshots/*
+!.gitkeep
+.v.example
+.en

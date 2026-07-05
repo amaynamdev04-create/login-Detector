@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+{% block title %}Login Activity | {{ config.APP_DISPLAY_NAME }}{% endblock %}
+{% block content %}
+<section class="page-stack">
+    <article class="panel-card">
+        <div class="panel-heading">
+            <div>
+                <p class="eyebrow">Investigation</p>
+                <h1>Authentication Activity</h1>
+            </div>
+            <a href="{{ url_for('api.export_logs') }}" class="secondary-button">Export CSV</a>
+        </div>
+
+        <form method="get" class="filter-grid">
+            <input type="text" name="q" value="{{ query }}" placeholder="Search username, IP, country, city, source" class="form-control">
+            <select name="status" class="form-control">
+                <option value="">All statuses</option>
+                <option value="success" {% if status == 'success' %}selected{% endif %}>Success</option>
+                <option value="failed" {% if status == 'failed' %}selected{% endif %}>Failed</option>
+            </select>
+            <input type="text" name="source" value="{{ source }}" placeholder="Source" class="form-control">
+            <input type="date" name="start" value="{{ start }}" class="form-control">
+            <input type="date" name="end" value="{{ end }}" class="form-control">
+            <button type="submit" class="primary-button">Apply Filters</button>
+        </form>
+    </article>
+
+    <article class="panel-card overflow-panel">
+        <div class="table-wrap">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>User</th>
+                        <th>Public IP</th>
+                        <th>Private IP</th>
+                        <th>IP Version</th>
+                        <th>Location</th>
+                        <th>Timezone</th>
+                        <th>ISP</th>
+                        <th>Source</th>
+                        <th>Status</th>
+                        <th>Risk</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in logs.items %}
+                        <tr>
+                            <td>{{ item.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                            <td>{{ item.username }}</td>
+                            <td>{{ item.public_ip }}</td>
+                            <td>{{ item.private_ip or 'N/A' }}</td>
+                            <td>{{ item.ip_version or 'Unknown' }}</td>
+                            <td>
+                                {{ item.city if item.city != 'Unknown' else '' }}
+                                {% if item.city != 'Unknown' and item.region != 'Unknown' %}, {% endif %}
+                                {{ item.region if item.region != 'Unknown' else '' }}
+                                {% if item.country != 'Unknown' and (item.city != 'Unknown' or item.region != 'Unknown') %}, {% endif %}
+                                {{ item.country }}
+                                {% if item.country_code != 'Unknown' %} ({{ item.country_code }}){% endif %}
+                            </td>
+                            <td>{{ item.timezone }}</td>
+                            <td>{{ item.isp }}</td>
+                            <td>{{ item.source }}</td>
+                            <td><span class="badge {% if item.status == 'success' %}badge-success{% else %}badge-danger{% endif %}">{{ item.status }}</span></td>
+                            <td>{{ item.risk_score }}</td>
+                        </tr>
+                    {% else %}
+                        <tr>
+                            <td colspan="11" class="table-empty">No login attempts match the current filters.</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination-row">
+            <span>Page {{ logs.page }} of {{ logs.pages or 1 }} | {{ logs.total }} records</span>
+            <div class="pagination-actions">
+                {% if logs.has_prev %}
+                    <a class="secondary-button" href="{{ url_for('logs.list_logs', page=logs.prev_num, q=query, status=status, source=source, start=start, end=end) }}">Previous</a>
+                {% endif %}
+                {% if logs.has_next %}
+                    <a class="secondary-button" href="{{ url_for('logs.list_logs', page=logs.next_num, q=query, status=status, source=source, start=start, end=end) }}">Next</a>
+                {% endif %}
+            </div>
+        </div>
+    </article>
+</section>
+{% endblock %}

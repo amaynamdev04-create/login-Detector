@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block title %}Settings | {{ config.APP_DISPLAY_NAME }}{% endblock %}
+{% block content %}
+<section class="page-stack">
+    <article class="panel-card">
+        <div class="panel-heading">
+            <div>
+                <p class="eyebrow">Runtime Controls</p>
+                <h1>Detection Settings</h1>
+            </div>
+        </div>
+
+        <form method="post" class="settings-grid">
+            <label class="settings-field">
+                <span>Alert Threshold</span>
+                <input type="number" min="1" name="alert_threshold" value="{{ app_config['ALERT_THRESHOLD'] }}" class="form-control">
+            </label>
+            <label class="settings-field">
+                <span>Block Duration (minutes)</span>
+                <input type="number" min="1" name="block_duration" value="{{ app_config['BLOCK_DURATION_MINUTES'] }}" class="form-control">
+            </label>
+            <label class="settings-field settings-span-2">
+                <span>Whitelist</span>
+                <input type="text" name="whitelist" value="{{ ', '.join(app_config['WHITELIST_IPS']) }}" class="form-control" placeholder="Comma-separated IPs">
+            </label>
+            <label class="settings-field settings-span-2">
+                <span>Blacklist</span>
+                <input type="text" name="blacklist" value="{{ ', '.join(app_config['BLACKLIST_IPS']) }}" class="form-control" placeholder="Comma-separated IPs">
+            </label>
+            <button type="submit" class="primary-button settings-span-2">Save Settings</button>
+        </form>
+    </article>
+
+    <article class="panel-card">
+        <div class="panel-heading">
+            <div>
+                <p class="eyebrow">Deployment Notes</p>
+                <h2>Environment Overview</h2>
+            </div>
+        </div>
+        <div class="stack-list">
+            <div class="list-row"><div><strong>Owner</strong><p>{{ config.APP_OWNER_NAME }}</p></div></div>
+            <div class="list-row"><div><strong>GeoIP Provider</strong><p>{{ app_config['GEOIP_PROVIDER_URL'] }}</p></div></div>
+            <div class="list-row"><div><strong>Watcher Enabled</strong><p>{{ 'Yes' if app_config['ENABLE_LOG_WATCHER'] else 'No' }}</p></div></div>
+            <div class="list-row"><div><strong>Webhook</strong><p>{{ app_config['WEBHOOK_URL'] or 'Not configured' }}</p></div></div>
+            <div class="list-row"><div><strong>Email Notifications</strong><p>{{ 'Enabled' if app_config['EMAIL_NOTIFICATIONS'] else 'Disabled' }}</p></div></div>
+        </div>
+    </article>
+</section>
+{% endblock %}

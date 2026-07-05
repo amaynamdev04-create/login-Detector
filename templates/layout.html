@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ config.APP_DISPLAY_NAME }}{% endblock %}</title>
+    <script>
+        (function () {
+            const storedTheme = localStorage.getItem('lam-theme');
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const theme = storedTheme || (systemDark ? 'dark' : 'light');
+            document.documentElement.dataset.theme = theme;
+            document.documentElement.classList.add('theme-ready');
+        }());
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block head %}{% endblock %}
+</head>
+<body x-data="appShell()" x-bind:data-sidebar="sidebarCollapsed ? 'collapsed' : 'expanded'">
+    <div class="app-shell">
+        <aside class="sidebar-panel">
+            <div class="sidebar-header">
+                <a href="{{ url_for('dashboard.dashboard') }}" class="brand-mark" aria-label="Open dashboard">
+                    <span class="brand-icon"><i class="fa-solid fa-shield-halved"></i></span>
+                    <span class="brand-copy" x-show="!sidebarCollapsed">
+                        <span class="eyebrow">Security Telemetry</span>
+                        <strong>{{ config.APP_DISPLAY_NAME }}</strong>
+                    </span>
+                </a>
+                <button type="button" class="icon-button" @click="sidebarCollapsed = !sidebarCollapsed" aria-label="Toggle sidebar">
+                    <i class="fa-solid" :class="sidebarCollapsed ? 'fa-bars' : 'fa-angle-left'"></i>
+                </button>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="Primary">
+                <a href="{{ url_for('dashboard.dashboard') }}" class="nav-link {% if request.endpoint == 'dashboard.dashboard' %}active{% endif %}">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span x-show="!sidebarCollapsed">Dashboard</span>
+                </a>
+                <a href="{{ url_for('logs.list_logs') }}" class="nav-link {% if request.endpoint == 'logs.list_logs' %}active{% endif %}">
+                    <i class="fa-solid fa-scroll"></i>
+                    <span x-show="!sidebarCollapsed">Login Activity</span>
+                </a>
+                <a href="{{ url_for('alerts.list_alerts') }}" class="nav-link {% if request.endpoint == 'alerts.list_alerts' %}active{% endif %}">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <span x-show="!sidebarCollapsed">Alerts</span>
+                </a>
+                <a href="{{ url_for('analytics.analytics') }}" class="nav-link {% if request.endpoint == 'analytics.analytics' %}active{% endif %}">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span x-show="!sidebarCollapsed">Analytics</span>
+                </a>
+                <a href="{{ url_for('settings.settings') }}" class="nav-link {% if request.endpoint == 'settings.settings' %}active{% endif %}">
+                    <i class="fa-solid fa-sliders"></i>
+                    <span x-show="!sidebarCollapsed">Settings</span>
+                </a>
+                <a href="{{ url_for('dashboard.about') }}" class="nav-link {% if request.endpoint == 'dashboard.about' %}active{% endif %}">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span x-show="!sidebarCollapsed">About</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer" x-show="!sidebarCollapsed">
+                <p class="eyebrow">Owner</p>
+                <strong>{{ config.APP_OWNER_NAME }}</strong>
+                <p>Production telemetry only. No sample records are shown.</p>
+            </div>
+        </aside>
+
+        <main class="main-panel">
+            <header class="topbar-panel">
+                <form class="search-panel" action="{{ url_for('logs.list_logs') }}" method="get" role="search">
+                    <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+                    <input id="globalSearch" type="search" name="q" placeholder="Search username, IP, country, city, source">
+                </form>
+
+                <div class="topbar-actions">
+                    <button type="button" class="icon-button" id="notificationBell" aria-label="Check alert count">
+                        <i class="fa-solid fa-bell"></i>
+                    </button>
+                    <button type="button" class="icon-button" @click="toggleTheme()" :aria-label="theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'">
+                        <i class="fa-solid" :class="theme === 'dark' ? 'fa-sun' : 'fa-moon'"></i>
+                    </button>
+                    <div class="status-chip" id="currentTime" aria-live="polite"></div>
+                    <div class="identity-chip">
+                        <span class="identity-avatar">{{ (session.get('full_name') or config.APP_OWNER_NAME)[0] }}</span>
+                        <div>
+                            <strong>{{ session.get('full_name', config.APP_OWNER_NAME) }}</strong>
+                            <span>{{ session.get('role', 'Administrator') }}</span>
+                        </div>
+                    </div>
+                    <form method="post" action="{{ url_for('auth.logout') }}">
+                        <button type="submit" class="icon-button" aria-label="Sign out">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        </button>
+                    </form>
+                </div>
+            </header>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-stack" aria-live="polite">
+                        {% for category, message in messages %}
+                            <div class="flash-message flash-{{ category }}">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            {% block content %}{% endblock %}
+        </main>
+    </div>
+
+    <div id="toastRoot" class="toast-root" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="{{ url_for('static', filename='js/charts.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/theme.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/alerts.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>
